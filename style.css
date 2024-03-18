@@ -1,0 +1,63 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(assets/background/body.png);
+    background-repeat: repeat;
+}
+
+/* NAVBAR */
+/* effet hover sur le bouton accueil*/
+.navbar-nav .nav-item:nth-child(1) .nav-link:hover {
+    background-color: #E20C0C; 
+}
+.nav-item:nth-child(1){
+border-bottom: #E20C0C solid 3px ;
+}
+
+/* effet hover sur le bouton boutique*/
+.navbar-nav .nav-item:nth-child(2) .nav-link:hover {
+    background-color: #EE6B2F;
+}
+.nav-item:nth-child(2){
+    border-bottom: #EE6B2F solid 3px ;
+    }
+
+/* effet hover sur le bouton medecins*/
+.navbar-nav .nav-item:nth-child(3) .nav-link:hover {
+    background-color: #E6BC2F;
+}
+.nav-item:nth-child(3){
+    border-bottom: #E6BC2F solid 3px ;
+    }
+
+/* effet hover sur le bouton potion*/
+.navbar-nav .nav-item:nth-child(4) .nav-link:hover {
+    background-color: #4DAD5B;
+}
+.nav-item:nth-child(4){
+    border-bottom: #4DAD5B solid 3px ;
+    }
+
+/* effet hover sur le bouton pokedex*/
+.navbar-nav .nav-item:nth-child(5) .nav-link:hover {
+    background-color: #30A7D7;
+}
+.nav-item:nth-child(5){
+    border-bottom: #30A7D7 solid 3px ;
+    }
+
+/* effet hover sur le bouton contact*/
+.navbar-nav .nav-item:nth-child(6) .nav-link:hover {
+    background-color: #1B53BA;
+}.nav-item:nth-child(6){
+border-bottom: #1B53BA solid 3px ;
+}
+
+.footer{
+  background-color: #1F1F1F;
+}

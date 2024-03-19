@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* fond d'ecran général*/
 body {
     background-image: url(assets/background/body.png);
     background-repeat: repeat;
@@ -61,3 +62,11 @@ border-bottom: #1B53BA solid 3px ;
 .footer{
   background-color: #1F1F1F;
 }
+
+/* partie boutique */
+
+.card, .centre{
+    background-image: url(/assets/background/boutique.png);
+    background-size: repeat;
+    background-color: aliceblue;
+ }

@@ -64,9 +64,25 @@ border-bottom: #1B53BA solid 3px ;
 }
 
 /* partie boutique */
-
 .card, .centre{
     background-image: url(/assets/background/boutique.png);
     background-size: repeat;
     background-color: aliceblue;
  }
+
+ /* partie personnalisation */
+ .image-container {
+    position: relative;
+  }
+  
+  .superposed-image {
+    position: absolute;
+    top: 190px;
+    left: 330px;
+    width: 360px;
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 100px;
+    opacity: 95%;
+  }
+  

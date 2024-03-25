@@ -1,5 +1,5 @@
 
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'><link rel="stylesheet" href="/slider/style.css">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'><link rel="stylesheet" href="/assets/CSS/slider.css">
 
 <section class="slider">
   <div class="swiper">
@@ -46,7 +46,7 @@
   </div>
 </section>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script><script  src="/slider/script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script><script  src="/assets/JS/slider.js"></script>
 
 </body>
 </html>

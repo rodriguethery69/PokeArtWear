@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/carousel/style.css">
+<link rel="stylesheet" href="/assets/CSS/carousel.css">
 
 
 <div class="product-carousel rounded-3 mb-5">
@@ -97,7 +97,7 @@
 </div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://kenwheeler.github.io/slick/slick/slick.js'></script><script  src="/carousel/script.js"></script>
+<script src='https://kenwheeler.github.io/slick/slick/slick.js'></script><script  src="/assets/JS/carousel.js"></script>
 
 </body>
 </html>

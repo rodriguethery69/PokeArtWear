@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="/login/style.css">
+<link rel="stylesheet" href="/assets/CSS/login.css">
 
 <section class="user">
   <div class="user_options-container">
@@ -59,22 +59,22 @@
   </div>
 </section>
 <section class="container-md m-auto">
-  <div class="row col-md-12 g-4 gap-5">
+  <div class="row col-md-10 gap-5 mb-5 m-auto">
     <div class="col">
       <div class="card">
-        <img src="/assets/connexion/134.jpg" class="card-img-top" alt="...">
+        <img src="/assets/connexion/134.jpg" class="img-fluid" alt="...">
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <img src="/assets/connexion/135.jpg" class="card-img-top" alt="...">
+        <img src="/assets/connexion/135.jpg" class="img-fluid" alt="...">
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <img src="/assets/connexion/136.jpg" class="card-img-top" alt="...">
+        <img src="/assets/connexion/136.jpg" class="img-fluid" alt="...">
       </div>
     </div>
   </div>
 </section>
-<script  src="/login/script.js"></script>
+<script  src="/assets/JS/login.js"></script>

@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
 .container {
-	max-width:400px;
+	max-width:700px;
 	width:100%;
 	margin:0 auto;
 	position:relative;
@@ -16,7 +16,7 @@
 }
 
 #contact h3 {
-	color: #F96;
+	color: #1F1F1F;
 	display: block;
 	font-size: 30px;
 	font-weight: 400;
@@ -61,7 +61,7 @@ fieldset {
 	cursor:pointer;
 	width:100%;
 	border:none;
-	background:#0CF;
+	background:#E20C0C;
 	color:#FFF;
 	margin:0 0 5px;
 	padding:10px;
@@ -69,7 +69,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-	background:#09C;
+	background:#a80000;
 	-webkit-transition:background 0.3s ease-in-out;
 	-moz-transition:background 0.3s ease-in-out;
 	transition:background-color 0.3s ease-in-out;
@@ -82,14 +82,14 @@ fieldset {
 	border:1px solid #999;
 }
 ::-webkit-input-placeholder {
- color:#888;
+ color:#1F1F1F;
 }
 :-moz-placeholder {
- color:#888;
+ color:#1F1F1F;
 }
 ::-moz-placeholder {
- color:#888;
+ color:#1F1F1F;
 }
 :-ms-input-placeholder {
- color:#888;
+ color:#1F1F1F;
 }

@@ -29,24 +29,7 @@
                             <img src="/assets/logo/logo.png" class="img-fluid" alt="logo pokeball" width="90" height="90">
                         </a>
                         <ul class="navbar-nav gap-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-white rounded-top" href="/index.php">Accueil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white rounded-top" href="/boutique.php">Boutique</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white rounded-top" href="#">Medecins</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white rounded-top" href="#">Potions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white rounded-top" href="#">Pokedex</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white rounded-top" href="/contact.php">Contact</a>
-                            </li>
+                            <?php require_once dirname(__DIR__) . "/accueil/navphp/navbar.php"; ?>
                         </ul>
                         <div>
                             <!-- logo connection -->

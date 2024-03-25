@@ -1,13 +1,13 @@
 <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
-<link rel="stylesheet" href="/avis/style.css">
+<link rel="stylesheet" href="/assets/CSS/avis.css">
 
 <section class="avis">
   <div class="gtco-testimonials">
     <h2>Avis Clients</h2>
     <div class="owl-carousel owl-carousel1 owl-theme">
       <div>
-        <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300" alt="">
+        <div class="card text-center"><img class="card-img-top" src="/assets/avis/2.jpg" alt="">
           <div class="card-body">
             <h5>Ronne Galle <br />
               <span> Project Manager </span>
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div>
-        <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301" alt="">
+        <div class="card text-center"><img class="card-img-top" src="/assets/avis/1.jpg" alt="">
           <div class="card-body">
             <h5>Missy Limana<br />
               <span> Engineer </span>
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div>
-        <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1575377222312-dd1a63a51638?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=302&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=302" alt="">
+        <div class="card text-center"><img class="card-img-top" src="/assets/avis/3.jpg" alt="">
           <div class="card-body">
             <h5>Martha Brown<br />
               <span> Project Manager </span>
@@ -56,7 +56,7 @@
 
 <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
-<script src="/avis/script.js"></script>
+<script src="/assets/JS/avis.js"></script>
 
 </body>
 

@@ -25,9 +25,14 @@
                     </button>
                     <div class="collapse navbar-collapse fs-4 fw-semibold justify-content-around" id="navbarNav">
                         <!-- logo gauche -->
-                        <a class="navbar-brand" href="/index.php">
-                            <img src="/assets/logo/logo.png" class="img-fluid" alt="logo pokeball" width="90" height="90">
-                        </a>
+                        <div>
+                            <a class="navbar-brand" href="/dashboard/login.html">
+                                <img src="/assets/logo_connection/admin.png" class="img-fluid" alt="pikachu" width="90" height="90">
+                            </a>
+                            <a class="navbar-brand" href="/index.php">
+                                <img src="/assets/logo/logo.png" class="img-fluid" alt="logo pokeball" width="90" height="90">
+                            </a>
+                        </div>
                         <ul class="navbar-nav gap-1">
                             <?php require_once dirname(__DIR__) . "/accueil/navphp/navbar.php"; ?>
                         </ul>

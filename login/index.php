@@ -1,6 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="/assets/CSS/login.css">
+<script defer src="/assets/JS/login.js"></script>
 
 <section class="user">
   <div class="user_options-container">
@@ -21,13 +22,13 @@
     <div class="user_options-forms" id="user_options-forms">
       <div class="user_forms-login">
         <h2 class="forms_title">Connexion</h2>
-        <form class="forms_form">
+        <form class="forms_form" action="/login/login.php" method="post">
           <fieldset class="forms_fieldset">
             <div class="forms_field">
-              <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+              <input type="email" name="email" placeholder="Email" class="forms_field-input" required autofocus />
             </div>
             <div class="forms_field">
-              <input type="password" placeholder="Password" class="forms_field-input" required />
+              <input type="password" name="password" placeholder="Password" class="forms_field-input" required />
             </div>
           </fieldset>
           <div class="forms_buttons">
@@ -38,16 +39,16 @@
       </div>
       <div class="user_forms-signup">
         <h2 class="forms_title">S'inscrire</h2>
-        <form class="forms_form">
+        <form class="forms_form" action="/login/inscription.php" method="post">
           <fieldset class="forms_fieldset">
             <div class="forms_field">
-              <input type="text" placeholder="Nom d'utilisateur" class="forms_field-input" required />
+              <input type="text" name="nom_utilisateur" placeholder="Nom d'utilisateur" class="forms_field-input" required />
             </div>
             <div class="forms_field">
-              <input type="email" placeholder="Email" class="forms_field-input" required />
+              <input type="email" name="email" placeholder="Email" class="forms_field-input" required />
             </div>
             <div class="forms_field">
-              <input type="password" placeholder="Password" class="forms_field-input" required />
+              <input type="password" name="password" placeholder="Password" class="forms_field-input" required />
             </div>
           </fieldset>
           <div class="forms_buttons">
@@ -55,6 +56,7 @@
           </div>
         </form>
       </div>
+
     </div>
   </div>
 </section>
@@ -77,4 +79,3 @@
     </div>
   </div>
 </section>
-<script  src="/assets/JS/login.js"></script>

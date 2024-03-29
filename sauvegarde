@@ -16,3 +16,28 @@
 <li class="nav-item">
     <a class="nav-link text-white rounded-top" href="/contact.php">Contact</a>
 </li>
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Récupérer le lien du logo de connexion et le conteneur du menu déroulant
+    const loginToggle = document.querySelector('.login-toggle');
+    const loginDropdown = document.querySelector('.dropdown-menu');
+
+    // Ajouter un écouteur d'événements au survol du lien de connexion
+    loginToggle.addEventListener('mouseenter', function () {
+        // Afficher le menu déroulant
+        loginDropdown.classList.add('show');
+    });
+
+    // Ajouter un écouteur d'événements pour masquer le menu déroulant lorsque la souris quitte le lien de connexion
+    loginToggle.addEventListener('mouseleave', function () {
+        // Masquer le menu déroulant
+        loginDropdown.classList.remove('show');
+    });
+
+    // Ajouter un écouteur d'événements pour masquer le menu déroulant lorsque la souris quitte le menu déroulant
+    loginDropdown.addEventListener('mouseleave', function () {
+        // Masquer le menu déroulant
+        loginDropdown.classList.remove('show');
+    });
+});

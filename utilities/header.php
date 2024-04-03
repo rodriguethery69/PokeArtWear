@@ -26,34 +26,15 @@
                     <div class="collapse navbar-collapse fs-4 fw-semibold justify-content-around" id="navbarNav">
                         <!-- logo gauche -->
                         <div>
-                        <?php require_once "acces.php"; ?>
+                            <?php require_once "acces.php"; ?>
                             <a class="navbar-brand" href="/index.php">
-                                <img src="/assets/logo/logo.png" class="img-fluid" alt="logo pokeball" width="90" height="90">
+                                <img src="/assets/logo/accueil.png" class="img-fluid" alt="logo maison" width="50" height="50">
                             </a>
                         </div>
                         <ul class="navbar-nav gap-1">
                             <?php require_once dirname(__DIR__) . "/accueil/navphp/navbar.php"; ?>
                         </ul>
-                        <div class="dropdown" id="loginDropdownContainer">
-                            <a class="navbar-brand login-toggle dropdown-toggle" href="#" id="loginDropdown" role="button" aria-expanded="false">
-                                <img src="/assets/logo_connection/connection.png" class="img-fluid" alt="logo login" width="90" height="90">
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="loginDropdown">
-                                <!-- Ajoutez des liens ou des options ici -->
-                                <li><a class="dropdown-item" href="/connexion.php">Connexion</a></li>
-                                    <hr class="dropdown-divider">
-                                <li><a class="dropdown-item" href="/profil.php">Mon Profil</a></li>
-                                <li><a class="dropdown-item" href="/parametres.php">Paramètres</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/login/logout.php">Déconnexion</a></li>
-                            </ul>
-                            <!-- logo panier -->
-                            <a class="navbar-brand" href="#">
-                                <img src="/assets/panier/panier.png" class="img-fluid" alt="logo panier" width="90" height="90">
-                            </a>
-                        </div>
+                        <?php require_once "connectionclient.php"; ?>
                     </div>
                 </div>
             </nav>

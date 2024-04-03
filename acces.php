@@ -1,23 +1,23 @@
 <?php
 session_start();
 
-// Vérifier si l'utilisateur est connecté
+// Vérifie si l'utilisateur est connecté
 if(isset($_SESSION['user_id'])) {
     // Récupérer le rôle de l'utilisateur à partir de la session ou de la base de données
-    $user_role = $_SESSION['user_role']; // C'est un exemple, vous devrez peut-être ajuster cela en fonction de votre implémentation réelle
+    $user_role = $_SESSION['user_role'];
 
-    // Affichage conditionnel du lien vers la page users en fonction du rôle de l'utilisateur
+    // Afficher le logo avec le lien pour les admins
     if($user_role === 'admin') {
         echo '<a class="navbar-brand" href="/dashboard/login.html">';
-        echo '<img src="/assets/logo_connection/admin.png" class="img-fluid" alt="pikachu" width="90" height="90">';
+        echo '<img src="/assets/logo_connection/admin.png" class="img-fluid" alt="pikachu" width="80" height="80">';
         echo '</a>';
     } else {
-        // Afficher seulement le logo sans lien pour les utilisateurs non-administrateurs
-        echo '<img src="/assets/logo_connection/admin.png" class="img-fluid" alt="pikachu" width="90" height="90">';
+        // Afficher le logo sans le lien pour les users
+        echo '<img src="/assets/logo_connection/admin.png" class="img-fluid" alt="pikachu" width="80" height="80">';
     }
 }
-// Toujours afficher le logo, même si l'utilisateur n'est pas connecté
+// Affiche le logo dans tout les cas
 else {
-    echo '<img src="/assets/logo_connection/admin.png" class="img-fluid" alt="pikachu" width="90" height="90">';
+    echo '<img src="/assets/logo_connection/admin.png" class="img-fluid" alt="pikachu" width="80" height="80">';
 }
 ?>

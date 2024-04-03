@@ -9,7 +9,7 @@ $onglets = [
         'href'   => '/boutique.php',
     ],
     [
-        'onglet' => 'Medecins',
+        'onglet' => 'Personnages',
         'href'   => '/medecins.php',
     ],
     [

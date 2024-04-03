@@ -11,6 +11,11 @@ body {
     background-repeat: repeat;
 }
 
+/* effet hover sur la liste*/
+.dropdown-menu .dropdown-item:hover {
+    background-color: #E20C0C;
+}
+
 /* NAVBAR */
 /* effet hover sur le bouton accueil*/
 .navbar-nav .nav-item:nth-child(1) .nav-link:hover {
@@ -28,7 +33,7 @@ border-bottom: #E20C0C solid 3px ;
     border-bottom: #EE6B2F solid 3px ;
     }
 
-/* effet hover sur le bouton medecins*/
+/* effet hover sur le bouton personnages*/
 .navbar-nav .nav-item:nth-child(3) .nav-link:hover {
     background-color: #E6BC2F;
 }

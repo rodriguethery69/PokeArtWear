@@ -3,24 +3,25 @@
 	max-width:700px;
 	width:100%;
 	margin:0 auto;
-	position:relative;
+	position:relative;  
 }
-#contact {
+
+#profile {
 	background:#F9F9F9;
 	padding:25px;
 	margin:50px 0;
 }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"]
+#profile input[type="text"], #profile input[type="email"], #profile input[type="tel"], #profile input[type="url"], #profile button[type="submit"]
 
-#contact h3 {
+#profile h3 {
 	color: #1F1F1F;
 	display: block;
 	font-size: 30px;
 	font-weight: 400;
 }
 
-#contact h4 {
+#profile h4 {
 	margin:5px 0 15px;
 	display:block;
 	font-size:13px;
@@ -34,7 +35,7 @@ fieldset {
 	width: 100%;
 }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+#profile input[type="text"], #profile input[type="email"], #profile input[type="tel"], #profile input[type="url"] {
 	width:100%;
 	border:1px solid #CCC;
 	background:#FFF;
@@ -42,20 +43,15 @@ fieldset {
 	padding:10px;
 }
 
-#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+#profile input[type="text"]:hover, #profile input[type="email"]:hover, #profile input[type="tel"]:hover, #profile input[type="url"]{
 	-webkit-transition:border-color 0.3s ease-in-out;
 	-moz-transition:border-color 0.3s ease-in-out;
 	transition:border-color 0.3s ease-in-out;
 	border:1px solid #AAA;
 }
 
-#contact textarea {
-	height:100px;
-	max-width:100%;
-  resize:none;
-}
 
-#contact button[type="submit"] {
+#profile button[type="submit"] {
 	cursor:pointer;
 	width:100%;
 	border:none;
@@ -66,16 +62,16 @@ fieldset {
 	font-size:15px;
 }
 
-#contact button[type="submit"]:hover {
+#profile button[type="submit"]:hover {
 	background:#a80000;
 	-webkit-transition:background 0.3s ease-in-out;
 	-moz-transition:background 0.3s ease-in-out;
 	transition:background-color 0.3s ease-in-out;
 }
 
-#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+#profile button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
 
-#contact input:focus, #contact textarea:focus {
+#profile input:focus {
 	outline:0;
 	border:1px solid #999;
 }

@@ -15,10 +15,10 @@
             </div>
             <div class="list">
                 <ul class="list-group d-flex flex-row gap-3">
-                    <a href="#"><img src="assets/reseaux/facebook.png " class="img-fluid" alt="logo facebook" width="50" height="50"></a>
-                    <a href="#"><img src="assets/reseaux/instagram.png" class="img-fluid" alt="logo instagram" width="50" height="50"></a>
-                    <a href="#"><img src="assets/reseaux/youtube.png" class="img-fluid" alt="logo youtube" width="50" height="50"></a>
-                    <a href="#"><img src="assets/reseaux/twitter.png" class="img-fluid" alt="logo twitter" width="50" height="50"></a>
+                    <a href="#"><img src="/assets/reseaux/facebook.png " class="img-fluid" alt="logo facebook" width="50" height="50"></a>
+                    <a href="#"><img src="/assets/reseaux/instagram.png" class="img-fluid" alt="logo instagram" width="50" height="50"></a>
+                    <a href="#"><img src="/assets/reseaux/youtube.png" class="img-fluid" alt="logo youtube" width="50" height="50"></a>
+                    <a href="#"><img src="/assets/reseaux/twitter.png" class="img-fluid" alt="logo twitter" width="50" height="50"></a>
                 </ul>
             </div>
         </container>

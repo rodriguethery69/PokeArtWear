@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Vérifie si l'utilisateur est connecté
 if(isset($_SESSION['user_id'])) {
@@ -8,7 +10,7 @@ if(isset($_SESSION['user_id'])) {
 
     // Afficher le logo avec le lien pour les admins
     if($user_role === 'admin') {
-        echo '<a class="navbar-brand" href="/dashboard/login.html">';
+        echo '<a class="navbar-brand" href="/dashboard/index.php">';
         echo '<img src="/assets/logo_connection/admin.png" class="img-fluid" alt="pikachu" width="80" height="80">';
         echo '</a>';
     } else {

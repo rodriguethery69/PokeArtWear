@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . ('/utilities/header.php');
-require_once __DIR__ . ('/boutique/banniere/banniere.php');
+require_once __DIR__ . '/../utilities/header.php';
+require_once __DIR__ . '/../boutique/banniere/banniere.php';
 ?>
 
 <div class="container-fluid text-white text-center mb-5">
@@ -12,18 +12,18 @@ require_once __DIR__ . ('/boutique/banniere/banniere.php');
 </div>
 
 <?php
-require_once __DIR__ . ('/boutique/logo/banniere-logo.php');
+require_once __DIR__ . '/../boutique/logo/banniere-logo.php';
 ?>
 
 <section class="carousel">
   <h2 class="text-white text-center mt-4 mb-3">Trouvez des idées de personnalisation</h2>
 
     <?php
-    require_once __DIR__ . ('/boutique/carousel/index.php')
+    require_once __DIR__ . '/../boutique/carousel/index.php';
     ?>
     
 </section>
 
 <?php
-require_once __DIR__ . ('/utilities/footer.php')
+require_once __DIR__ . '/../utilities/footer.php'
 ?>

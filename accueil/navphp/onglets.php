@@ -6,11 +6,11 @@ $onglets = [
     ],
     [
         'onglet' => 'Boutique',
-        'href'   => '/boutique.php',
+        'href'   => '/boutique/boutique.php',
     ],
     [
         'onglet' => 'Personnages',
-        'href'   => '/medecins.php',
+        'href'   => '/personnages.php',
     ],
     [
         'onglet' => 'Potions',

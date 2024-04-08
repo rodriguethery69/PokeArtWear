@@ -26,13 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt = $db->prepare("INSERT INTO compte (nom_utilisateur, email, password) VALUES (?, ?, ?)");
             $stmt->execute([$nom_utilisateur, $email, $password_hache]);
 
-            // Récupérer l'ID de l'utilisateur nouvellement créé
-            $user_id = $db->lastInsertId();
-
-            // Insérer une entrée correspondante dans la table compte_client
-            $stmt = $db->prepare("INSERT INTO compte_client (id_compte, id_client) VALUES (?, ?)");
-            $stmt->execute([$user_id, $id_client]); // Assurez-vous de remplacer $id_client par l'ID du client associé à cet utilisateur
-
             // Redirection vers la page de succès
             header("Location: http://pokeartwear/inscription_succes.php");
             exit();

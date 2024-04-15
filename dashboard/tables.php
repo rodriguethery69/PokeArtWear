@@ -8,8 +8,7 @@ require_once __DIR__ . ('/utilities/header.php');
             <h1 class="mt-4">Tables</h1>
             <div class="card mb-4">
                 <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    Tableau
+                    <button class="btn btn-success me-3" onclick="window.location.href='../dashboard/Crud/form.php'">Créer un profil</button>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
@@ -73,7 +72,7 @@ require_once __DIR__ . ('/utilities/header.php');
 
                                 echo "</td>";
                                 echo "<td>";
-                                echo "<a href='delete.php?id=" . $row['id_compte'] . "' onclick='return confirm(\"Êtes-vous sûr de vouloir supprimer ce profil ?\")'><button type= 'button' class= 'btn btn-danger' >Modifier</button>";
+                                echo "<a href='/../dashboard/Crud/delete.php?id=" . $row['id_compte'] . "' onclick='return confirm(\"Êtes-vous sûr de vouloir supprimer ce profil ?\")'><button type= 'button' class= 'btn btn-danger' >Supprimer</button>";
                                 echo "</td>";
                                 echo "</tr>";
                             }
@@ -84,7 +83,7 @@ require_once __DIR__ . ('/utilities/header.php');
             </div>
         </div>
     </main>
-    
+
     <?php
     require_once __DIR__ . ('/utilities/footer.php');
     ?>

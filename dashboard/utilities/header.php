@@ -8,13 +8,13 @@
         <meta name="author" content="" />
         <title>Dashboard - ADMIN PokeArtWear</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="/./dashboard/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">PokeArtWear</a>
+            <a class="navbar-brand ps-3" href="/dashboard/index.php">PokeArtWear</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -25,7 +25,7 @@
                 </div>
             </form>
             <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <!-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -35,7 +35,7 @@
                         <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -55,7 +55,7 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="tables.php">Clients</a>
+                                    <a class="nav-link" href="/dashboard/tables.php">Clients</a>
                                     <a class="nav-link" href="#"></a>
                                 </nav>
                             </div>

@@ -30,7 +30,7 @@
         echo '<ul class="dropdown-menu" aria-labelledby="loginDropdown">';
         echo '<li><span class="dropdown-item">Bienvenue, ' . $user_name . ' !</span></li>';
         echo '<hr class="dropdown-divider">';
-        echo '<li><a class="dropdown-item" href="/profil.php">Mon Profil</a></li>';
+        echo '<li><a class="dropdown-item" href="/profils/profil.php">Mon Profil</a></li>';
         echo '<li><a class="dropdown-item" href="/parametres.php">Paramètres</a></li>';
         echo '<li><hr class="dropdown-divider"></li>';
         echo '<li><a class="dropdown-item" href="/login/logout.php">Déconnexion</a></li>';

@@ -55,7 +55,7 @@ if (isset($_SESSION['success_message'])) {
 }
 ?>
 
-
+<?php require_once __DIR__ . '/../utilities/header.php'; ?>
 <link rel="stylesheet" href="/assets/CSS/profil.css">
 <section>
     <div class="container">
@@ -104,3 +104,4 @@ if (isset($_SESSION['success_message'])) {
         </form>
     </div>
 </section>
+<?php require_once __DIR__ . '/../utilities/footer.php'; ?>

@@ -3,7 +3,11 @@ Orejime.init({
   //appElement: "#app",
   cookieName: "orejime",
   cookieExpiresAfterDays: 365,
+<<<<<<< HEAD
   privacyPolicy: "/cookies/mentions-legales.php",
+=======
+  privacyPolicy: "/mentions-legales.html",
+>>>>>>> 2e41f66714da6754df8a30aa904c313af0370c7a
   default: !0,
   mustConsent: !0,
   mustNotice: !1,
@@ -77,5 +81,37 @@ Orejime.init({
       default: !0,
       onlyOnce: !0,
     },
+<<<<<<< HEAD
+=======
+
+    {
+      name: "welcometothejungle",
+      title: "Welcome to the Jungle",
+      cookies: [
+        ["_BEAMER_FIRST_VISIT_lXMXoTfb15511", ".welcometothejungle.com"],
+        ["_BEAMER_USER_ID_lXMXoTfb15511", ".welcometothejungle.com"],
+        ["_sp_id.407f", ".welcometothejungle.com"],
+      ],
+      purposes: ["analytics", "security"],
+      required: !1,
+      optOut: !1,
+      default: !0,
+      onlyOnce: !0,
+    },
+    {
+      name: "simplon.co",
+      title: "Simplon.co",
+      cookies: [
+        ["XSRF-TOKEN", ".simplon.co"],
+        ["orejime", ".simplon.co"],
+        ["simplonco_session", ".simplon.co"],
+      ],
+      purposes: ["security"],
+      required: !0,
+      optOut: !1,
+      default: !0,
+      onlyOnce: !0,
+    },
+>>>>>>> 2e41f66714da6754df8a30aa904c313af0370c7a
   ],
 });

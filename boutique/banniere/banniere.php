@@ -7,7 +7,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h2 class="card-title">Partez de Zéro</h2>
-                                <a button type="button" class="btn btn-danger btn-lg" href="/personnalisation.php">JE PERSONNALISE</button></a>
+                                <a button type="button" class="btn btn-danger btn-lg" href="../../personnalisation/personnalisation.php">JE PERSONNALISE</button></a>
                             </div>
                         </div>
                         <div class="col-md-4">

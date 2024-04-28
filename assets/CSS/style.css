@@ -1,0 +1,98 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fond d'ecran général*/
+body {
+    background-image: url('/assets/background/body.png');
+    background-repeat: repeat;
+}
+
+/* effet hover sur la liste*/
+.dropdown-menu .dropdown-item:hover {
+    background-color: #E20C0C;
+}
+
+/* NAVBAR */
+/* effet hover sur le bouton accueil*/
+.navbar-nav .nav-item:nth-child(1) .nav-link:hover {
+    background-color: #E20C0C; 
+}
+.nav-item:nth-child(1){
+border-bottom: #E20C0C solid 3px ;
+}
+
+/* effet hover sur le bouton boutique*/
+.navbar-nav .nav-item:nth-child(2) .nav-link:hover {
+    background-color: #EE6B2F;
+}
+.nav-item:nth-child(2){
+    border-bottom: #EE6B2F solid 3px ;
+    }
+
+/* effet hover sur le bouton personnages*/
+.navbar-nav .nav-item:nth-child(3) .nav-link:hover {
+    background-color: #E6BC2F;
+}
+.nav-item:nth-child(3){
+    border-bottom: #E6BC2F solid 3px ;
+    }
+
+/* effet hover sur le bouton potion*/
+.navbar-nav .nav-item:nth-child(4) .nav-link:hover {
+    background-color: #4DAD5B;
+}
+.nav-item:nth-child(4){
+    border-bottom: #4DAD5B solid 3px ;
+    }
+
+/* effet hover sur le bouton pokedex*/
+.navbar-nav .nav-item:nth-child(5) .nav-link:hover {
+    background-color: #30A7D7;
+}
+.nav-item:nth-child(5){
+    border-bottom: #30A7D7 solid 3px ;
+    }
+
+/* effet hover sur le bouton contact*/
+.navbar-nav .nav-item:nth-child(6) .nav-link:hover {
+    background-color: #1B53BA;
+}.nav-item:nth-child(6){
+border-bottom: #1B53BA solid 3px ;
+}
+
+.footer {
+  background-color: #1F1F1F;
+  
+}
+
+/* partie boutique */
+.card, .centre{
+    background-image: url(/assets/background/boutique.png);
+    background-size: repeat;
+    background-color: aliceblue;
+    width: auto;
+ }
+
+/* partie personnalisation */
+.image-container {
+    position: relative;
+}
+
+.superposed-image {
+    position: absolute;
+    top: 19%; /* Ajustez cette valeur en pourcentage pour positionner l'image en fonction de la hauteur du conteneur parent */
+    left: 50%; /* Positionne l'image au centre horizontalement */
+    transform: translateX(-50%); /* Centre l'image horizontalement */
+    width: 31%; /* Ajustez cette valeur pour définir la largeur de l'image */
+    height: auto; /* Permet à l'image de conserver son aspect ratio */
+    max-width: 100%; /* Empêche l'image de dépasser la largeur du conteneur parent */
+    max-height: 26%; /* Empêche l'image de dépasser la hauteur du conteneur parent */
+    object-fit: cover;
+    border-radius: 91px;
+    opacity: 0.95; /* La valeur d'opacité doit être entre 0 et 1 */
+}
+

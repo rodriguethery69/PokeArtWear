@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://unpkg.com/orejime@2.2.1/dist/orejime.css" />
     <script src="https://unpkg.com/orejime@2.2.1/dist/orejime.js"></script>
 
-    <link rel="stylesheet" href="/style.css">
-    <script defer src="/header.js"></script>
+    <link rel="stylesheet" href="/assets/CSS/style.css">
+    <script defer src="/assets/JS/header.js"></script>
     <script defer src="/cookies/orejime-config.js"></script>
     <title>PokeArtWear</title>
 </head>
@@ -30,7 +30,7 @@
                     <div class="collapse navbar-collapse fs-4 fw-semibold justify-content-around" id="navbarNav">
                         <!-- logo gauche -->
                         <div>
-                            <?php require_once dirname(__DIR__) . "/acces.php";?>
+                            <?php require_once dirname(__DIR__) . "/accueil/acces.php";?>
                             <a class="navbar-brand" href="/index.php">
                                 <img src="/assets/logo/accueil.png" class="img-fluid" alt="logo maison" width="50" height="50">
                             </a>
@@ -38,11 +38,10 @@
                         <ul class="navbar-nav gap-1">
                             <?php require_once dirname(__DIR__) . "/accueil/navphp/navbar.php"; ?>
                         </ul>
-                        <?php require_once dirname(__DIR__) . "/connectionclient.php"; ?>
+                        <?php require_once dirname(__DIR__) . "../login/connectionclient.php"; ?>
                     </div>
                 </div>
             </nav>
         </section>
     </header>
-    <div id="orejime"></div>
     <main>

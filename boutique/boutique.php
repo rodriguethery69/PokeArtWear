@@ -19,7 +19,7 @@ require_once __DIR__ . '/../boutique/logo/banniere-logo.php';
   <h2 class="text-white text-center mt-4 mb-3">Trouvez des idées de personnalisation</h2>
 
     <?php
-    require_once __DIR__ . '/../boutique/carousel/index.php';
+    require_once __DIR__ . '/../boutique/carousel/carousel.php';
     ?>
     
 </section>

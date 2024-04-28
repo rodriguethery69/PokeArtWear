@@ -10,7 +10,7 @@ $onglets = [
     ],
     [
         'onglet' => 'Personnages',
-        'href'   => '/personnages.php',
+        'href'   => 'Personnages/personnages.php',
     ],
     [
         'onglet' => 'Potions',
@@ -22,6 +22,6 @@ $onglets = [
     ],
     [
         'onglet' => 'Contact',
-        'href'   => '/contact.php',
+        'href'   => '/contact/form/contact.php',
     ],
 ];

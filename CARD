@@ -1,0 +1,246 @@
+UPDATE types SET couleurs = '#A0A2A0' WHERE id = 1;
+UPDATE types SET couleurs = '#E72324' WHERE id = 2;
+UPDATE types SET couleurs = '#2481EF' WHERE id = 3;
+UPDATE types SET couleurs = '#3DA224' WHERE id = 4;
+UPDATE types SET couleurs = '#FAC100' WHERE id = 5;
+UPDATE types SET couleurs = '#3DD9FF' WHERE id = 6;
+UPDATE types SET couleurs = '#FF8100' WHERE id = 7;
+UPDATE types SET couleurs = '#923FCC' WHERE id = 8;
+UPDATE types SET couleurs = '#92501B' WHERE id = 9;
+UPDATE types SET couleurs = '#82BAEF' WHERE id = 10;
+UPDATE types SET couleurs = '#EF3F7A' WHERE id = 11;
+UPDATE types SET couleurs = '#92A212' WHERE id = 12;
+UPDATE types SET couleurs = '#B0AA82' WHERE id = 13;
+UPDATE types SET couleurs = '#703F70' WHERE id = 14;
+UPDATE types SET couleurs = '#4F3F3D' WHERE id = 15;
+UPDATE types SET couleurs = '#4F60E2' WHERE id = 16;
+UPDATE types SET couleurs = '#60A2B9' WHERE id = 17;
+UPDATE types SET couleurs = '#EF70EF' WHERE id = 18;
+
+
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+<link rel="stylesheet" href="/assets/CSS/slider.css">
+
+<section class="slider">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide--one">
+        <span>Arcanin</span>
+        <div>
+          <h2>N°59</h2>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--two">
+        <span>Roucarnage</span>
+        <div>
+          <h2>N°18</h2>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--three">
+        <span>Magneti</span>
+        <div>
+          <h2>N°81</h2>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--four">
+        <span>Noadkoko</span>
+        <div>
+          <h2>N°103</h2>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--five">
+        <span>Machoc</span>
+        <div>
+          <h2>N°66</h2>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--six">
+        <span>Lokhlass</span>
+        <div>
+          <h2>N°131</h2>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+<script src="/assets/JS/slider.js"></script>
+
+</body>
+
+</html>
+
+<?php
+
+require_once __DIR__ . '../../../config/config.php';
+require_once __DIR__ . '../../../function/database.fn.php';
+
+$db = getPDOlink($config);
+
+// Exécutez la requête SQL pour récupérer les données des pokemons avec leurs types correspondants
+$sql = "SELECT p.id AS pokemon_id, p.nom AS pokemon_nom, p.image_path AS pokemon_image, t.id AS type_id, t.nom AS type_nom, t.couleurs AS type_couleur
+        FROM pokemons p
+        JOIN pokemon_types pt ON p.id = pt.pokemon_id
+        JOIN types t ON pt.type_id = t.id
+        ORDER BY RAND()
+        LIMIT 6";
+$stmt = $db->prepare($sql);
+$stmt->execute();
+$pokemons = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+<link rel="stylesheet" href="/assets/CSS/slider.css">
+<section class="slider">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <?php foreach ($pokemons as $pokemon) : ?>
+        <div class="swiper-slide" style="background-color: <?= $pokemon['type_couleur']; ?>">
+          <img src="<?= $pokemon['pokemon_image']; ?>" alt="<?= $pokemon['pokemon_nom']; ?>" class="img-fluid">
+          <span><?= $pokemon['pokemon_nom']; ?></span>
+          <div>
+            <h2>N°<?= $pokemon['pokemon_id']; ?></h2>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+<script src="/assets/JS/slider.js"></script>
+
+</body>
+
+</html>
+
+css
+
+/* .swiper-slide--one {
+background: url(/assets/slider/arcanin.jpg)
+
+}
+
+.swiper-slide--two {
+background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+url(/assets/slider/roucarnage.jpg)
+}
+
+.swiper-slide--three {
+background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+url(/assets/slider/magneti.jpg);
+
+}
+
+.swiper-slide--four {
+background: no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--five {
+background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+url(/assets/slider/machoc.jpg)
+no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--six {
+background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+url(/assets/slider/Lokhlass.jpg)
+no-repeat 50% 50% / cover;
+} */
+
+/* .swiper-slide--one span {
+background: #E20C0C;
+}
+
+.swiper-slide--two span {
+background: #EE6B2F;
+}
+
+.swiper-slide--three span {
+background: #E6BC2F;
+}
+
+.swiper-slide--four span {
+background: #4DAD5B;
+}
+
+.swiper-slide--five span {
+background: #30A7D7;
+}
+
+.swiper-slide--six span {
+background: #1B53BA;
+} */
+
+
+<?php include 'tabcarousel.php'; ?>
+
+<link rel="stylesheet" href="/assets/CSS/carousel.css">
+
+<?php
+// Boucle à travers chaque élément du tableau $carouselcards
+foreach ($carousel as $value) {
+
+echo'<div class="product-carousel rounded-3 mb-5">
+        <div class="product">
+          <div class="product-top">
+            <img class="product-image rounded-3" src="' . $value['img'] . '" />
+            <!--div class="product-name">
+              <p>Product Name</p>
+            </div-->
+          </div>
+          <div class="product-bottom">
+            <p class="product-prices">
+              <!-- <span class="price-was">£22.00</span> -->
+              <!-- <span class="price-save">£10.00</span> -->
+              <span class="price">' . $value['prix'] . ' </span>
+            </p>
+            <button class="shop-now rounded-3">"' . $value['acheter'] . '" </button>
+          </div>
+        </div>
+      </div>';
+}
+
+?>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://kenwheeler.github.io/slick/slick/slick.js'></script><script  src="/assets/JS/carousel.js"></script>
+
+</body>
+
+</html>
+
+
+<img src="/assets/boutique/france.png" class="img-fluid" width="150" height="50" alt="logo drapeau francais">
+            <div class="text-dark">Imprimé en France</div>
+        </div>
+        <div class="col-xs-6 col-md-3 text-center fw-semibold fs-5">
+            <img src="/assets/boutique/coton.png" class="img-fluid" width="150" height="50" alt="logo coton 100% bio">
+            <div class="text-dark">Coton 100% bio</div>
+        </div>
+        <div class="col-xs-6 col-md-3 text-center fw-semibold fs-5">
+            <img src="/assets/boutique/eco.png" class="img-fluid" width="150" height="50" alt="logo eco responsable">
+            <div class="text-dark">Eco-Responsable</div>
+        </div>
+        <div class="col-xs-6 col-md-3 text-center fw-semibold fs-5">
+            <img src="/assets/boutique/livraison.png" class="img-fluid" width="150" height="50" alt="logo livraison">
+            <div class="text-dark">Livraison Express</div>
+
+
+            [
+        'img' => '/assets/Pokemon/Aquali.jpg',
+        'alt' => 'Image du Pokemon Aquali',
+    ],
+    [
+        'img' => '/assets/Pokemon/Voltali.jpg',
+        'alt' => 'Image du Pokemon Voltali',
+    ],
+    [
+        'img' => '/assets/Pokemon/Pyroli.jpg',
+        'alt' => 'Image du Pokemon Pyroli',
+    ],

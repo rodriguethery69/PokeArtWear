@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/assets/CSS/style.css">
     <script defer src="/assets/JS/header.js"></script>
     <script defer src="/cookies/orejime-config.js"></script>
+    <link rel="shortcut icon" href="/assets/logo/admin.ico" type="image/x-icon">
     <title>PokeArtWear</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
                         <ul class="navbar-nav gap-1">
                             <?php require_once dirname(__DIR__) . "/accueil/navphp/navbar.php"; ?>
                         </ul>
-                        <?php require_once dirname(__DIR__) . "../login/connectionclient.php"; ?>
+                        <?php require_once dirname(__DIR__) . "../login/connection/connectionclient.php"; ?>
                     </div>
                 </div>
             </nav>

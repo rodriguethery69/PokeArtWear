@@ -10,15 +10,15 @@ $onglets = [
     ],
     [
         'onglet' => 'Personnages',
-        'href'   => 'Personnages/personnages.php',
+        'href'   => '/Personnages/personnages.php',
     ],
     [
         'onglet' => 'Potions',
-        'href'   => '/potions.php',
+        'href'   => '/potions/potions.php',
     ],
     [
         'onglet' => 'Pokedex',
-        'href'   => '/pokedex.php',
+        'href'   => '/pokedex/pokedex.php',
     ],
     [
         'onglet' => 'Contact',

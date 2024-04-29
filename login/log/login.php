@@ -1,8 +1,8 @@
 <?php
 // Inclure le fichier de configuration
-require_once '../config/config.php';
+require_once '../../config/config.php';
 // Inclure le fichier de base de données
-require_once '../function/database.fn.php';
+require_once '../../function/database.fn.php';
 
 
 // Vérifier si le formulaire de connexion a été soumis

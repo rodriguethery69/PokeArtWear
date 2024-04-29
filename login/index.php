@@ -1,3 +1,5 @@
+<?php include 'tabinscription.php'; ?>
+
 <link rel="stylesheet" href="/assets/CSS/login.css">
 <script defer src="/assets/JS/login.js"></script>
 
@@ -20,7 +22,7 @@
     <div class="user_options-forms" id="user_options-forms">
       <div class="user_forms-login">
         <h2 class="forms_title">Connexion</h2>
-        <form class="forms_form" action="/login/login.php" method="post">
+        <form class="forms_form" action="/login/log/login.php" method="post">
           <fieldset class="forms_fieldset">
             <div class="forms_field">
               <input type="email" name="email" placeholder="Email" class="forms_field-input" required autofocus />
@@ -37,7 +39,7 @@
       </div>
       <div class="user_forms-signup">
         <h2 class="forms_title">S'inscrire</h2>
-        <form class="forms_form" action="/login/inscription.php" method="post">
+        <form class="forms_form" action="/login/inscription/inscription.php" method="post">
           <fieldset class="forms_fieldset">
             <div class="forms_field">
               <input type="text" name="nom_utilisateur" placeholder="Nom d'utilisateur" class="forms_field-input" required />
@@ -58,22 +60,19 @@
     </div>
   </div>
 </section>
-<section class="container-md m-auto">
-  <div class="row col-md-10 gap-5 mb-5 m-auto">
+
+<?php
+// Boucle à travers chaque élément du tableau $imgs
+echo '<section class="container-md m-auto">';
+echo '<div class="row col-md-10 gap-5 mb-5 m-auto">';
+foreach ($imgs as $value) {
+    echo '
     <div class="col">
-      <div class="card">
-        <img src="/assets/connexion/134.jpg" class="img-fluid" alt="...">
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="/assets/connexion/135.jpg" class="img-fluid" alt="...">
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="/assets/connexion/136.jpg" class="img-fluid" alt="...">
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="card">
+            <img src="' . $value['img'] . '" class="card-img" alt="' . $value['alt'] . '">
+        </div>
+    </div>';
+}
+echo '</div>'; 
+echo '</section>'; 
+?>

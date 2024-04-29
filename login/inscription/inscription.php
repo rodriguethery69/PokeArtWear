@@ -1,6 +1,6 @@
 <?php
-require_once '../config/config.php';
-require_once '../function/database.fn.php';
+require_once '../../config/config.php';
+require_once '../../function/database.fn.php';
 
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute([$nom_utilisateur, $email, $password_hache]);
 
             // Redirection vers la page de succès
-            header("Location: http://pokeartwear/login/inscription_succes.php");
+            header("Location: http://pokeartwear/login/inscription/inscription_succes.php");
             exit();
         }
     } else {

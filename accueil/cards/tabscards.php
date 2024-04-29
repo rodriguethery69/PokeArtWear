@@ -5,7 +5,7 @@ $cards = [
         'card__title' => 'Attrapez Votre Style',
         'card__text' => 'Chez PokeArtWear, nous croyons que chaque t-shirt devrait être aussi unique qu’un Pokémon <strong>légendaire</strong>. C’est pourquoi nous avons libéré la puissance de notre intelligence artificielle Pokémon pour créer des t-shirts qui évoquent l’esprit de votre Pokémon préféré.',
         'href' => '/personnalisation/personnalisation.php',
-        'titre' => 'PERSONALISE'
+        'titre' => 'PERSONNALISE'
     ],
     [   
         'img' => '/assets/personnages/ondine.jpg',
@@ -17,7 +17,7 @@ $cards = [
     [
         'img' => '/assets/accueil/potion.jpg',
         'card__title' => 'Potions Pokémon',
-        'card__text' => 'nous mélangeons la science et la magie pour concocter des potions uniques qui raviront les Dresseurs Pokémon du monde entier. Grâce à notre intelligence artificielle alchimiste, vous pouvez créer des potions aux effets étonnants.',
+        'card__text' => 'Nous mélangeons la science et la magie pour concocter des potions uniques qui raviront les Dresseurs Pokémon du monde entier. Grâce à notre intelligence artificielle alchimiste, vous pouvez créer des potions aux effets étonnants.',
         'href' => 'potions/potions.php',
         'titre' => 'POTIONS'
     ],

@@ -244,3 +244,42 @@ echo'<div class="product-carousel rounded-3 mb-5">
         'img' => '/assets/Pokemon/Pyroli.jpg',
         'alt' => 'Image du Pokemon Pyroli',
     ],
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+<link rel="stylesheet" href="/assets/CSS/slider.css">
+<section class="slider">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <?php foreach ($pokemons as $pokemon) : ?>
+        <div class="swiper-slide">
+          <div class="slider-container">
+            <img src="<?= $pokemon['pokemon_image']; ?>" alt="<?= $pokemon['pokemon_nom']; ?>" class="img-fluid">
+            <span style="background-color: <?= $pokemon['type_couleur']; ?>"><?= $pokemon['pokemon_nom']; ?></span>
+            <h2>N°<?= $pokemon['pokemon_id']; ?></h2>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+<script src="/assets/JS/slider.js"></script>
+
+</body>
+
+</html>
+
+function getPokemons($db) {
+    $sql = "SELECT p.id AS pokemon_id, p.nom AS pokemon_nom, p.image_path AS pokemon_image, t.id AS type_id, t.nom AS type_nom, t.couleurs AS type_couleur
+            FROM pokemons p
+            JOIN pokemon_types pt ON p.id = pt.pokemon_id
+            JOIN types t ON pt.type_id = t.id
+            ORDER BY RAND()
+            LIMIT 6";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}

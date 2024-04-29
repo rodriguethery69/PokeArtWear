@@ -6,23 +6,22 @@
     }
 
     // Vérifier si l'utilisateur est connecté
-    if (isset($_SESSION['user_id'])) {
+    if (isset($_SESSION['user_id'])) 
         // Inclure le fichier de configuration
-        require_once __DIR__ . '../../config/config.php';
+        require_once __DIR__ . '../../../config/config.php';
         // Inclure le fichier de base de données
-        require_once __DIR__ . '../../function/database.fn.php';
+        require_once __DIR__ . '../../../function/database.fn.php';
 
-        // Récupérer l'ID de l'utilisateur depuis la session
+        require_once __DIR__ . '../../../function/utilisateur.fn.php';
+       // Vérifier si la session n'est pas déjà démarrée
+        if (!isset($_SESSION)) {
+            session_start();
+                }
+
+        // Vérifier si l'utilisateur est connecté
+        if (isset($_SESSION['user_id'])) {
         $user_id = $_SESSION['user_id'];
-
-        // Obtenez une connexion PDO à la base de données
-        $db = getPDOlink($config);
-
-        // Requête SQL pour sélectionner le nom de l'utilisateur
-        $stmt_name = $db->prepare("SELECT nom_utilisateur FROM compte WHERE id = ?");
-        $stmt_name->execute([$user_id]);
-        $user_name = $stmt_name->fetchColumn();
-
+        $user_name = utilisateurs($config, $user_id);
         // Afficher le lien de profil et le texte de bienvenue
         echo '<a class="navbar-brand login-toggle dropdown-toggle" href="#" id="loginDropdown" role="button" aria-expanded="false">';
         echo '<img src="/assets/logo_connection/connecter.png" class="img-fluid" alt="logo profil" width="40" height="40">';
@@ -33,11 +32,11 @@
         echo '<li><a class="dropdown-item" href="/profils/profil.php">Mon Profil</a></li>';
         echo '<li><a class="dropdown-item" href="/parametres.php">Paramètres</a></li>';
         echo '<li><hr class="dropdown-divider"></li>';
-        echo '<li><a class="dropdown-item" href="/login/logout.php">Déconnexion</a></li>';
+        echo '<li><a class="dropdown-item" href="/login/log/logout.php">Déconnexion</a></li>';
         echo '</ul>';
     } else {
         // Afficher le lien de connexion standard
-        echo '<a class="navbar-brand login-toggle dropdown-toggle" href="../login/connexion.php" id="loginDropdown" role="button" aria-expanded="false">';
+        echo '<a class="navbar-brand login-toggle dropdown-toggle" href="/../login/connection/connexion.php" id="loginDropdown" role="button" aria-expanded="false">';
         echo '<img src="/assets/logo_connection/profil.png" class="img-fluid" alt="logo profil" width="40" height="40">';
         echo '</a>';
     }

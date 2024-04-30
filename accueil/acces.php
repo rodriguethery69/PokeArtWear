@@ -10,7 +10,7 @@ if(isset($_SESSION['user_id'])) {
 
     // Afficher le logo avec le lien pour les admins
     if($user_role === 'admin') {
-        echo '<a class="navbar-brand" href="/dashboard/index.php">';
+        echo '<a class="navbar-brand" href="/dashboard/tables.php">';
         echo '<img src="/assets/logo_connection/admin.png" class="img-fluid" alt="pikachu" width="80" height="80">';
         echo '</a>';
     } else {

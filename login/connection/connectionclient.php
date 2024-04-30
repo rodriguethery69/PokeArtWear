@@ -12,7 +12,7 @@
         // Inclure le fichier de base de données
         require_once __DIR__ . '../../../function/database.fn.php';
 
-        require_once __DIR__ . '../../../function/utilisateur.fn.php';
+        require_once __DIR__ . '../../../function/connection.fn.php';
        // Vérifier si la session n'est pas déjà démarrée
         if (!isset($_SESSION)) {
             session_start();
@@ -21,7 +21,7 @@
         // Vérifier si l'utilisateur est connecté
         if (isset($_SESSION['user_id'])) {
         $user_id = $_SESSION['user_id'];
-        $user_name = utilisateurs($config, $user_id);
+        $user_name = connection($config, $user_id);
         // Afficher le lien de profil et le texte de bienvenue
         echo '<a class="navbar-brand login-toggle dropdown-toggle" href="#" id="loginDropdown" role="button" aria-expanded="false">';
         echo '<img src="/assets/logo_connection/connecter.png" class="img-fluid" alt="logo profil" width="40" height="40">';

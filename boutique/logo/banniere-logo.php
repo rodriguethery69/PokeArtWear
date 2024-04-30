@@ -4,7 +4,7 @@
     <div class="row justify-content-between">
         
 <?php
-// Boucle à travers chaque élément du tableau $carouselcards
+// Boucle à travers chaque élément du tableau $tablogo
 foreach ($logo as $value) {
 
         echo '<div class="col-xs-6 col-md-3 text-center fw-semibold fs-5">

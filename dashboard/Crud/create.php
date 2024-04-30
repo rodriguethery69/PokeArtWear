@@ -32,6 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute([$id_compte, $nom_client, $prenom_client, $code_postal, $ville, $adresse_liv_client, $adresse_fac_client, $tel_client, $email_client]);
 
     // Rediriger vers une page de confirmation ou une autre page après l'insertion
-    header("Location: confirmation.php");
+    header("Location: http://pokeartwear/dashboard/tables.php");
     exit;
 }

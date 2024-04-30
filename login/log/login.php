@@ -48,7 +48,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // Redirection vers la page de connexion si le formulaire n'a pas été soumis
-    header("Location: connexion.php");
+    header("Location: http://pokeartwear/login/connection/connexion.php");
     exit();
+}
+// Afficher le message d'erreur s'il est défini
+if (isset($error)) {
+    echo '<div class="error-message">' . $error . '</div>';
 }
 ?>

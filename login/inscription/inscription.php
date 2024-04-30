@@ -1,6 +1,8 @@
 <?php
 require_once '../../config/config.php';
 require_once '../../function/database.fn.php';
+require_once '../../function/inscription.fn.php';
+
 
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,19 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = htmlspecialchars($_POST['password']);
 
         // Vérifier si l'e-mail est unique
-        $db = getPDOlink($config);
-        $stmt = $db->prepare("SELECT COUNT(*) AS count FROM compte WHERE email = ?");
-        $stmt->execute([$email]);
-        $row = $stmt->fetch();
-        if ($row['count'] > 0) {
+        if (!inscription($config, $email)) {
             $error = "L'e-mail est déjà utilisé.";
         } else {
-            // Hachage du mot de passe
-            $password_hache = password_hash($password, PASSWORD_DEFAULT);
-
             // Insérer le nouvel utilisateur dans la base de données
-            $stmt = $db->prepare("INSERT INTO compte (nom_utilisateur, email, password) VALUES (?, ?, ?)");
-            $stmt->execute([$nom_utilisateur, $email, $password_hache]);
+            NewUtilisateur($config, $nom_utilisateur, $email, $password);
 
             // Redirection vers la page de succès
             header("Location: http://pokeartwear/login/inscription/inscription_succes.php");
@@ -39,3 +33,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: inscription.php");
     exit();
 }
+?>
+

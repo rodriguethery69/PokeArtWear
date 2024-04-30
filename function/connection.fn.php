@@ -1,7 +1,8 @@
 <?php
 require_once __DIR__ . '/../config/config.php';
 require_once __DIR__ . '/database.fn.php';
-function utilisateurs($config, $user_id) {
+
+function connection($config, $user_id) {
     // Obtenez une connexion PDO à la base de données
     $db = getPDOlink($config);
 

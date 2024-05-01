@@ -1,0 +1,45 @@
+<section>
+  <div class="container">
+    <form id="contact" action="traitement.php" method="post">
+      <h3>Contactez-Nous</h3>
+      <fieldset>
+        <label for="nom">Nom:</label>
+        <input placeholder="Nom" type="text" tabindex="1" required autofocus id="nom" name="nom">
+      </fieldset>
+      <fieldset>
+        <label for="email">Email:</label>
+        <input placeholder="Email" type="email" tabindex="2" required id="email" name="email">
+      </fieldset>
+      <fieldset>
+        <label for="telephone">Téléphone:</label>
+        <input placeholder="Téléphone" type="tel" tabindex="3" required id="telephone" name="telephone">
+        <div class="invalid-feedback">Veuillez entrer un numéro de téléphone valide.</div>
+      </fieldset>
+      <fieldset>
+        <label for="message">Message:</label>
+        <textarea placeholder="Message...." tabindex="5" required id="message" name="message"></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
+      </fieldset>
+    </form>
+  </div>
+</section>
+
+Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "rodriguethery@gmail.com",
+        Password : "447F681F3A1E0DC2C2E0DE95621EDC07EB3E",
+        To : 'rodriguethery@gmail.com',
+        From : "rodriguethery@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+
+
+    inputName.addEventListener('input', (e)=>{addclass(inputName, UserRegex, e.target.value, nomValid)});
+    inputTel.addEventListener('input', (e)=>{addclass(inputTel, PhoneNumberRegex, e.target.value)});
+    inputEmail.addEventListener('input', (e)=>{addclass(inputEmail, EmailRegex, e.target.value)});
+    inputComment.addEventListener('input', (e)=>{addclass(inputComment, CommentRegex, e.target.value)});

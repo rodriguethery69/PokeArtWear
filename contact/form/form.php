@@ -1,7 +1,7 @@
 <?php include 'tabimg.php'; ?>
 
 <link rel="stylesheet" href="/assets/CSS/form.css">
-<script defer src="../form/form.js"></script>
+<script defer src="./form.js"></script>
 <script defer src="https://smtpjs.com/v3/smtp.js"></script>
 
 <div id="success-message" style="display: none;" class="alert alert-success">Le courriel a été envoyé avec succès !</div>
@@ -15,30 +15,35 @@
         <label for="input1">Nom:</label>
         <input type="text" class="form-control" id="input1" required autofocus id="nom" placeholder="Nom">
         <div class="invalid-feedback">Veuillez entrer un nom valide.</div>
+        <div class="valid-feedback">Champs Valide.</div>
       </fieldset>
 
       <fieldset>
         <label for="input2">Email:</label>
         <input type="email" class="form-control" id="input2" placeholder="Email">
         <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
+        <div class="valid-feedback">Champs Valide.</div>
       </fieldset>
 
       <fieldset>
         <label for="input3">Téléphone:</label>
         <input type="tel" class="form-control" id="input3" placeholder="Téléphone">
         <div class="invalid-feedback">Veuillez entrer un numéro de téléphone valide.</div>
+        <div class="valid-feedback">Champs Valide.</div>
       </fieldset>
 
       <fieldset>
         <label for="input4">Sujet:</label>
         <input type="texte" class="form-control" id="input4" placeholder="Sujet">
         <div class="invalid-feedback">Veuillez entrer un sujet valide.</div>
+        <div class="valid-feedback">Champs Valide.</div>
       </fieldset>
 
       <fieldset>
         <label for="Textarea1">Message:</label>
         <textarea class="form-control" id="Textarea1" placeholder="Message...."></textarea>
         <div class="invalid-feedback">Veuillez entrer un message valide.</div>
+        <div class="valid-feedback">Champs Valide.</div>
       </fieldset>
 
       <fieldset>

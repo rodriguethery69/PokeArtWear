@@ -1,4 +1,6 @@
-<section>
+<link rel="stylesheet" href="../../assets/CSS/boutique.css">
+
+<section class="">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mb-1 p-0">
@@ -7,7 +9,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h2 class="card-title">Partez de Zéro</h2>
-                                <a button type="button" class="btn btn-danger btn-lg" href="../../personnalisation/personnalisation.php">JE PERSONNALISE</button></a>
+                                <a href="../../personnalisation/personnalisation.php" class="btn btn-danger btn-lg">JE PERSONNALISE</a>
                             </div>
                         </div>
                         <div class="col-md-4">

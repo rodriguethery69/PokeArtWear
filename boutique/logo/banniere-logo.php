@@ -1,6 +1,6 @@
 <?php include 'tablogo.php'; ?>
 
-<section class="centre rounded-3">
+<section class="centre rounded-3 overflow-x-hidden">
     <div class="row justify-content-between">
         
 <?php

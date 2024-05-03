@@ -107,3 +107,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: inscription.php");
     exit();
 }
+
+<section class="slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($pokemons as $pokemon) : ?>
+                            <div class="swiper-slide img-fluid">
+                                <img src="<?= $pokemon['image_path'] ?> " alt="<?php echo $pokemon['nom']; ?>" class="img-fluid rounded-3">
+                                <span><?php echo $pokemon['nom']; ?></span>
+                                <div>
+                                    <h2>N°<?php echo $pokemon['id']; ?></h2>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+
+
+            // Définir le filtre par défaut
+$typeFilter = 0;
+
+// Vérifier si le formulaire a été soumis
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['type'])) {
+    $typeFilter = $_POST['type'];
+}
+
+// Requête pour récupérer les Pokémon selon le type sélectionné
+if ($typeFilter == 0) {
+    $sql = "SELECT p.* FROM pokemons p";
+    $stmt = $db->query($sql);
+} else {
+    $sql = "SELECT p.*
+            FROM pokemons p
+            JOIN pokemon_types pt ON p.id = pt.pokemon_id
+            WHERE pt.type_id = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([$typeFilter]);
+}
+
+$pokemons = $stmt->fetchAll(PDO::FETCH_ASSOC);

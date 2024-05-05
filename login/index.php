@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" href="/assets/CSS/login.css">
 <script defer src="/assets/JS/login.js"></script>
+<script defer src="../inscription/regex.js"></script>
 
 <section class="user">
   <div class="user_options-container">
@@ -41,15 +42,19 @@
         <h2 class="forms_title">S'inscrire</h2>
         <form class="forms_form" action="/login/inscription/inscription.php" method="post">
           <fieldset class="forms_fieldset">
-            <div class="forms_field">
-              <input type="text" name="nom_utilisateur" placeholder="Nom d'utilisateur" class="forms_field-input" required />
+
+            <div class="forms_field"> 
+              <input type="text" name="nom_utilisateur" class="form-control" id="input1" required autofocus id="Nom d'utilisateur" placeholder="Nom d'utilisateur">
             </div>
+
             <div class="forms_field">
-              <input type="email" name="email" placeholder="Email" class="forms_field-input" required />
+              <input type="email" name="email" class="form-control" id="input2" placeholder="Email">  
             </div>
+
             <div class="forms_field">
-              <input type="password" name="password" placeholder="Password" class="forms_field-input" required />
+              <input type="password" name="password" class="form-control" id="input3" placeholder="Password">  
             </div>
+
           </fieldset>
           <div class="forms_buttons">
             <input type="submit" value="Sign up" class="forms_buttons-action">

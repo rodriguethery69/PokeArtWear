@@ -1,5 +1,3 @@
-
-
 button {
   background-color: transparent;
   padding: 0;
@@ -132,7 +130,7 @@ input::placeholder {
 .user_options-registered,
 .user_options-unregistered {
   width: 50%;
-  padding: 75px 45px;
+  padding: 35px 45px;
   color: #fff;
   font-weight: 300;
 }
@@ -175,7 +173,7 @@ input::placeholder {
   top: 50%;
   left: 30px;
   width: calc(50% - 30px);
-  min-height: 420px;
+  min-height: 460px !important;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);

@@ -94,6 +94,3 @@ form.addEventListener('submit', e => {
         console.log('Certains champs ne sont pas valides. L\'e-mail ne sera pas envoyé.');
     }
 });
-
-
-

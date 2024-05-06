@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../config/config.php';
-require_once __DIR__ . '/database.fn.php';
+require_once __DIR__ . '/../function/database.fn.php';
 
 // Récupére tous les types de Pokémon
 function getTypes($db) {
@@ -52,4 +52,13 @@ function getQuantités($db) {
     $stmt->execute();
     $quantites = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $quantites;
+}
+
+// Récupére le prix du t-shirt
+function getPrix($db) {
+    $sql = "SELECT prix_normal FROM prix;";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $prixNormal = $stmt->fetchColumn();
+    return $prixNormal;
 }

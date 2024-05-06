@@ -42,7 +42,7 @@
     }
     ?>
     <!-- logo panier -->
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="../../panier/panier.php">
         <img src="/assets/panier/panier.png" class="img-fluid" alt="logo panier" width="50" height="50">
     </a>
 </div>

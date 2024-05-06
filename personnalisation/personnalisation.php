@@ -9,6 +9,7 @@ $types = getTypes($db);
 $tailles = getTailles($db);
 $quantites = getQuantités($db);
 
+
 // Définir le filtre par défaut
 $typeFilter = 0;
 
@@ -65,24 +66,37 @@ $pokemons = getPokemon($db, $typeFilter);
             <section class="selection text-center">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
-                        <div class="col-md-12 d-flex justify-content-center gap-3">
-                            <div class="form-group ">
-                                <label for="taille"></label>
-                                <select class="form-control" id="taille" name="taille">
-                                    <option value="taille-tshirt">Taille T-shirt</option>
-                                    <?php foreach ($tailles as $taille) : ?>
-                                        <option value="<?php echo $taille['id']; ?>"><?php echo $taille['taille']; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="quantite"></label>
-                                <select class="form-control" id="quantite" name="quantite">
-                                    <option value="quantite-tshirt">Quantité</option>
-                                    <?php foreach ($quantites as $quantite) : ?>
-                                        <option value="<?php echo $quantite['id']; ?>"><?php echo $quantite['quantite']; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
+                        <div class="col-md-8">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-4 ">
+                                    <div class="form-group">
+                                        <select class="form-control" id="taille" name="taille">
+                                            <option value="taille-tshirt">Taille T-shirt</option>
+                                            <?php foreach ($tailles as $taille) : ?>
+                                                <option value="<?php echo $taille['id']; ?>"><?php echo $taille['taille']; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <select class="form-control" id="quantite" name="quantite">
+                                            <option value="quantite-tshirt">Quantité</option>
+                                            <?php foreach ($quantites as $quantite) : ?>
+                                                <option value="<?php echo $quantite['id']; ?>"><?php echo $quantite['quantite']; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group text-center">
+                                        <?php
+                                        // Récupérer le prix normal depuis la base de données
+                                        $prixNormal = getPrix($db);
+                                        ?>
+                                        <input type="text" class="form-control" id="prix" name="prix" value="Prix : <?php echo $prixNormal; ?> € TTC" readonly>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-12 mt-2">

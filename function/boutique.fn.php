@@ -36,14 +36,23 @@ function getPokemon($db, $typeFilter = 0) {
     }
 }
 
-// Récupére toutes les tailles
+// Récupère toutes les tailles avec leurs libellés
 function getTailles($db) {
-    $sql = "SELECT * FROM tailles";
+    $sql = "SELECT id, taille FROM tailles ORDER BY `id` ASC"; // Sélectionnez également le libellé de la taille
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $tailles = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $tailles;
 }
+
+// function getTailleById($db, $tailleId) {
+//     $sql = "SELECT taille FROM tailles WHERE id = :id";
+//     $stmt = $db->prepare($sql);
+//     $stmt->bindValue(':id', $tailleId);
+//     $stmt->execute();
+//     $result = $stmt->fetch(PDO::FETCH_ASSOC);
+//     return $result['taille'];
+// }
 
 // Récupére les quantités de la base de données
 function getQuantités($db) {
@@ -62,3 +71,16 @@ function getPrix($db) {
     $prixNormal = $stmt->fetchColumn();
     return $prixNormal;
 }
+
+function getPokemonNameByImage($db, $image_path) {
+    // Requête SQL pour récupérer le nom du Pokémon correspondant à l'image
+    $sql = "SELECT nom FROM pokemons WHERE image_path = :image_path";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':image_path', $image_path, PDO::PARAM_STR);
+    $stmt->execute();
+    $pokemon = $stmt->fetch(PDO::FETCH_ASSOC);
+    // Si un Pokémon correspondant est trouvé, retournez son nom, sinon retournez "Pokemon inconnu"
+    return $pokemon ? $pokemon['nom'] : "Pokemon inconnu";
+}
+
+    

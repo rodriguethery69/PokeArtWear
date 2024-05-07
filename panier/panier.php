@@ -3,6 +3,8 @@ require_once __DIR__ . ('/../utilities/header.php');
 require_once __DIR__ . '../../config/config.php';
 require_once __DIR__ . '../../function/database.fn.php';
 
+$db = getPDOlink($config);
+
 // Démarrer la session
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -22,12 +24,12 @@ if (session_status() == PHP_SESSION_NONE) {
             echo '<div class="cart-item">';
             echo '<img src="' . $article['image_url'] . '" alt="Image du produit" class="product-image">';
             echo '<div class="product-details">';
-            // Vous pouvez remplacer ces valeurs factices par les vraies données du produit
             echo '<h3>Nom du produit</h3>';
             echo '<p>Taille: ' . $article['taille'] . '</p>';
             echo '<p>Quantité: ' . $article['quantite'] . '</p>';
-            // Assurez-vous de récupérer le prix du produit à partir de votre base de données
-            echo '<p>' . $article['prix'] . '</p>'; // Exemple de prix factice
+            echo '<p>Prix: ' . $article['prix'] . '€ TTC</p>';
+            $total_article = $article['prix'] * $article['quantite'];
+            echo '<p>Total: ' . $total_article . '€ TTC</p>';
             echo '</div>';
             echo '<button class="remove-item">Supprimer</button>';
             echo '</div>';

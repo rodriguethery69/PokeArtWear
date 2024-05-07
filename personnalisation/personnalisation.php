@@ -73,7 +73,7 @@ $pokemons = getPokemon($db, $typeFilter);
                                         <select class="form-control" id="taille" name="taille">
                                             <option value="taille-tshirt">Taille T-shirt</option>
                                             <?php foreach ($tailles as $taille) : ?>
-                                                <option value="<?php echo $taille['id']; ?>"><?php echo $taille['taille']; ?></option>
+                                                <option value="<?php echo $taille['taille']; ?>"><?php echo $taille['taille']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                     </div>
@@ -83,7 +83,7 @@ $pokemons = getPokemon($db, $typeFilter);
                                         <select class="form-control" id="quantite" name="quantite">
                                             <option value="quantite-tshirt">Quantité</option>
                                             <?php foreach ($quantites as $quantite) : ?>
-                                                <option value="<?php echo $quantite['id']; ?>"><?php echo $quantite['quantite']; ?></option>
+                                                <option value="<?php echo $quantite['quantite']; ?>"><?php echo $quantite['quantite']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                     </div>

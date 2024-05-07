@@ -9,9 +9,9 @@ const prixElement = document.getElementById('prix'); // Élément du prix
 addToCartButton.addEventListener('click', () => {
     // Récupération des valeurs sélectionnées par l'utilisateur
     const selectedTaille = tailleSelect.value;
-    const selectedQuantite = quantiteSelect.value;
+    const selectedQuantite = parseInt(quantiteSelect.value);
     const selectedImageUrl = imageTshirt.src;
-    const selectedPrix = prixElement.value;
+    const selectedPrix = parseFloat(prixElement.value.split(' ')[2]);
 
     // Création d'un objet FormData pour envoyer les données
     const formData = new FormData();
@@ -19,7 +19,7 @@ addToCartButton.addEventListener('click', () => {
     formData.append('quantite', selectedQuantite);
     formData.append('image_url', selectedImageUrl);
     formData.append('prix', selectedPrix);
-
+    
     // Envoi de la requête AJAX
     fetch('/panier/ajout_panier.php', {
         method: 'POST',

@@ -23,6 +23,7 @@ $pokemons = getPokemon($db, $typeFilter);
 
 ?>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+<script defer src="../assets/JS/ajout_panier.js"></script>
 <link rel="stylesheet" href="../assets/CSS/slider.css">
 
 <section class="image-container mt-5 overflow-x-hidden">

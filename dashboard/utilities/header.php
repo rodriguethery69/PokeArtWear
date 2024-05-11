@@ -38,7 +38,7 @@
             </ul> -->
         </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
+            <div id="layoutSidenav_nav" class="col-md-3">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
@@ -59,10 +59,10 @@
                                     <a class="nav-link" href="#"></a>
                                 </nav>
                             </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="tables.html">
+                            <div class="sb-sidenav-menu-heading">Pokemons</div>
+                            <a class="nav-link" href="/dashboard/visuel/visuel_pokemon.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
+                                Gestions Images
                             </a>
                         </div>
                     </div>

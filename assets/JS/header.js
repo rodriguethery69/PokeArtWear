@@ -21,5 +21,3 @@ document.addEventListener('DOMContentLoaded', function () {
         loginDropdown.classList.remove('show');
     });
 });
-
-

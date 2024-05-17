@@ -43,6 +43,7 @@ foreach ($listes as $value) {
         </container>
     </section>
 </footer>
+<script src="/assets/JS/header.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,8 @@
 Orejime.init({
   elementID: "orejime",
-  //appElement: "#app",
   cookieName: "orejime",
   cookieExpiresAfterDays: 365,
-  privacyPolicy: "/cookies/mentions-legales.php",
+  privacyPolicy: "#",
   default: !0,
   mustConsent: !0,
   mustNotice: !1,

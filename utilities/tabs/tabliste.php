@@ -10,7 +10,7 @@ $listes = [
     ],
     [
         'texte' => 'Données personnelles',
-        'href'   => '#',
+        'href'   => '/cookies/mentions-legales.php',
     ],
     [
         'texte' => 'Nous contacter',

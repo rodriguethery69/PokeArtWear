@@ -8,7 +8,7 @@
 
 <section>
   <div class="container">
-  <form action="rodriguethery@gmail.com" class id="contact">
+  <form action="rodriguethery@gmail.com" method="POST" id="contact">
       <h3>Contactez-Nous</h3>
 
       <fieldset>
@@ -47,7 +47,7 @@
       </fieldset>
 
       <fieldset>
-        <input class="btn btn-danger" type="submit" >
+        <input class="btn btn-primary" type="submit" >
       </fieldset>
 
     </form>
@@ -67,5 +67,5 @@ foreach ($imgs as $value) {
     </div>';
 }
 echo '</div>'; // Fermeture de la div "row"
-echo '</section>'; // Fermeture de la section "container-md m-auto"
+echo '</section>';
 ?>

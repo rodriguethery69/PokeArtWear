@@ -15,9 +15,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // Ajouter un écouteur d'événements au clic sur le lien de connexion pour afficher ou masquer le menu déroulant
     loginToggle.addEventListener('click', toggleDropdown);
 
-    // Ajouter un écouteur d'événements pour masquer le menu déroulant lorsque la souris quitte le menu déroulant
-    loginDropdown.addEventListener('mouseleave', function () {
-        // Masquer le menu déroulant
-        loginDropdown.classList.remove('show');
     });
-});
+

@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -43,7 +44,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link" href="../../dashboard/index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
@@ -55,12 +56,11 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/dashboard/tables.php">Clients</a>
-                                    <a class="nav-link" href="#"></a>
+                                    <a class="nav-link" href="../../dashboard/tables.php">Clients</a>
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Pokemons</div>
-                            <a class="nav-link" href="/dashboard/visuel/visuel_pokemon.php">
+                            <a class="nav-link" href="../dashboard/visuel/visuel_pokemon.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Gestions Images
                             </a>

@@ -13,8 +13,8 @@ echo '<ol class="cards__container">
   <li class="card">
     <div class="card__thumb rounded-2"><img class="img-fluid" src="' . $value['img'] . '" /></div>
     <div class="card__content rounded-2">
-      <h3 class="card__title">' . $value['card__title'] . '</h3>
-      <p class="card__text">' . $value['card__text'] . '</p>
+      <h3 class="card__title">' . $value['card_title'] . '</h3>
+      <p class="card__text">' . $value['card_text'] . '</p>
       <a button type="button" class="btn btn-dark btn-lg" href="' . $value['href'] . '">' . $value['titre'] . '</button></a>
     </div>
   </li>
